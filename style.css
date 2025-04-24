@@ -483,3 +483,61 @@ body.darkmode .dot {
 body.darkmode .dot.active {
   background-color: #fff;
 }
+body.darkmode .about-wrapper {
+  background: #181818;
+  color: #f3f3f3;
+}
+body.darkmode .about-values .value-box,
+body.darkmode .customer-feedback,
+body.darkmode .about-quote,
+body.darkmode .team-photo-placeholder {
+  background: #232323 !important;
+  color: #f3f3f3 !important;
+  box-shadow: none;
+}
+body.darkmode .about-quote {
+  color: #e0e0e0 !important;
+}
+body.darkmode .about-contact a {
+  background: #554127;
+  color: #fff;
+}
+
+/* === Kontaktseite: Darkmode === */
+body.darkmode .kontakt-container {
+  background: #181818;
+  color: #f3f3f3;
+}
+body.darkmode .kontakt-form-box,
+body.darkmode .info-card {
+  background: #232323 !important;
+  color: #f3f3f3 !important;
+  box-shadow: none;
+}
+body.darkmode .kontakt-form input,
+body.darkmode .kontakt-form textarea {
+  background: #232323;
+  color: #f3f3f3;
+  border: 1px solid #555;
+}
+body.darkmode .kontakt-form input::placeholder,
+body.darkmode .kontakt-form textarea::placeholder {
+  color: #bbb;
+}
+body.darkmode .kontakt-form button {
+  background: #554127;
+  color: #fff;
+}
+body.darkmode .kontakt-form button:hover {
+  background: #78654f;
+  color: #fff;
+}
+body.darkmode .kontakt-headline {
+  color: #fff !important;
+}
+body.darkmode .kontakt-intro {
+  color: #e0e0e0;
+}
+body.darkmode .info-title {
+  color: #fff !important;
+}
