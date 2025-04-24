@@ -36,7 +36,7 @@
       display: flex;
       justify-content: space-between;
       transform: translateY(-50%);
-      padding: 0 20px; /* Gleichmäßiger Abstand von links und rechts */
+      padding: 0 20px;
       box-sizing: border-box;
       pointer-events: none;
     }
@@ -86,6 +86,22 @@
   </style>
 </head>
 <body>
+  <!-- HEADER EINBAU -->
+  <div id="navbar"></div>
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+
+        // script.js nachladen (für Menü & Darkmode)
+        const script = document.createElement("script");
+        script.src = "script.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      });
+  </script>
+
   <main class="content">
     <div class="slider">
       <div class="slides" id="slides">
@@ -140,6 +156,7 @@
     <a href="shop.html" class="button">← Zurück zum Shop</a>
   </main>
 
+  <!-- SLIDER SCRIPT -->
   <script>
     const slides = document.getElementById('slides');
     const totalSlides = slides.children.length;
