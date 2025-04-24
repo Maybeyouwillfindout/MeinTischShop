@@ -1,4 +1,3 @@
-/* === Grundlayout & Schrift === */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -95,8 +94,6 @@ body:not(.darkmode) .moon-icon {
 body.darkmode .moon-icon {
   filter: brightness(0) invert(1);
 }
-
-<img src="mondicon.png" alt="Mond Icon" class="moon-icon">
 
 /* === Content === */
 .content.centered {
@@ -482,4 +479,71 @@ body.darkmode .dot {
 
 body.darkmode .dot.active {
   background-color: #fff;
+}
+
+/* === DARKMODE FÜR ÜBER UNS UND KONTAKT === */
+body.darkmode .about-wrapper {
+  background: #181818;
+  color: #f3f3f3;
+}
+body.darkmode .about-values .value-box,
+body.darkmode .customer-feedback,
+body.darkmode .about-quote,
+body.darkmode .team-photo-placeholder {
+  background: #232323 !important;
+  color: #f3f3f3 !important;
+  box-shadow: none;
+}
+body.darkmode .about-quote {
+  color: #e0e0e0 !important;
+}
+body.darkmode .about-contact a {
+  background: #554127;
+  color: #fff;
+}
+body.darkmode .info-title {
+  color: #fff !important;
+}
+
+/* === DARKMODE FÜR KONTAKTSEITE === */
+body.darkmode .kontakt-container {
+  background: #181818;
+  color: #f3f3f3;
+}
+body.darkmode .kontakt-form-box,
+body.darkmode .info-card {
+  background: #232323 !important;
+  color: #f3f3f3 !important;
+  box-shadow: none;
+}
+body.darkmode .kontakt-form input,
+body.darkmode .kontakt-form textarea {
+  background: #232323;
+  color: #f3f3f3;
+  border: 1px solid #555;
+}
+body.darkmode .kontakt-form input::placeholder,
+body.darkmode .kontakt-form textarea::placeholder {
+  color: #bbb;
+}
+body.darkmode .kontakt-form button {
+  background: #554127;
+  color: #fff;
+}
+body.darkmode .kontakt-form button:hover {
+  background: #78654f;
+  color: #fff;
+}
+body.darkmode .kontakt-headline {
+  color: #fff !important;
+}
+body.darkmode .kontakt-intro {
+  color: #e0e0e0;
+}
+body.darkmode .kontakt-info-box a {
+  color: #fff !important;
+  text-decoration: underline;
+}
+body.darkmode .kontakt-info-box a:visited {
+  color: #e0e0e0 !important;
 }
