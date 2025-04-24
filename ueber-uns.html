@@ -5,32 +5,188 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Über uns – Mein Tisch</title>
   <link rel="stylesheet" href="style.css" />
-
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    .about-wrapper {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 1rem;
+      background: #fff;
+      border-radius: 1.2rem;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    }
+    .about-header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    .team-photo-placeholder {
+      width: 100%;
+      max-width: 370px;
+      height: 220px;
+      background: #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      font-size: 1.4rem;
+      border-radius: 1rem;
+      flex-shrink: 0;
+      font-family: sans-serif;
+      font-weight: 600;
+      text-align: center;
+    }
+    .about-text {
+      flex: 1;
+      min-width: 220px;
+    }
+    .about-text h1 {
+      margin-top: 0;
+      font-size: 2.3rem;
+      color: #212121;
+    }
+    .about-values {
+      display: flex;
+      gap: 1.5rem;
+      margin: 2rem 0 1.5rem 0;
+      flex-wrap: wrap;
+    }
+    .value-box {
+      background: #f7f6f4;
+      padding: 1.2rem;
+      border-radius: .8rem;
+      flex: 1 1 180px;
+      min-width: 180px;
+      text-align: center;
+      font-size: 1.07rem;
+      box-shadow: 0 0 4px rgba(0,0,0,0.04);
+      color: #333;
+    }
+    .about-quote {
+      background: #f0f0f0;
+      padding: 1.2rem 1.4rem;
+      border-radius: 1rem;
+      font-style: italic;
+      text-align: center;
+      font-size: 1.17rem;
+      color: #555;
+      margin: 2.5rem 0 1rem 0;
+      box-shadow: 0 0 4px rgba(0,0,0,0.04);
+    }
+    .customer-feedback {
+      background: #fafafa;
+      padding: 1.1rem 1.3rem;
+      border-radius: .7rem;
+      margin-bottom: 2rem;
+      display: flex;
+      gap: 1.1rem;
+      align-items: center;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 4px rgba(0,0,0,0.04);
+    }
+    .feedback-photo {
+      width: 56px;
+      height: 56px;
+      background: #e0e0e0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #aaa;
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+    .feedback-text {
+      font-size: 1rem;
+      color: #444;
+      flex: 1;
+    }
+    .about-contact {
+      text-align: center;
+      margin-top: 2.7rem;
+    }
+    .about-contact a {
+      display: inline-block;
+      margin-top: 0.8rem;
+      padding: .9rem 2.1rem;
+      background: #78654f;
+      color: #fff;
+      border-radius: .7rem;
+      text-decoration: none;
+      font-size: 1.09rem;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .about-contact a:hover {
+      background: #554127;
+    }
+    @media (max-width: 800px) {
+      .about-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .team-photo-placeholder {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Header Platzhalter -->
   <div id="navbar"></div>
   <script>
     fetch("header.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("navbar").innerHTML = data;
-
-        // Jetzt script.js laden
         const script = document.createElement("script");
         script.src = "script.js";
         script.defer = true;
         document.body.appendChild(script);
       });
   </script>
-  <main class="content centered">
-    <h1 data-aos="fade-up">Über uns</h1>
-    <p data-aos="fade-up">Wir sind zwei Freunde mit einer gemeinsamen Leidenschaft: Holz, Handwerk und kreative Ideen.</p>
-    <p data-aos="fade-up">Unser Ziel ist es, aus scheinbar gewöhnlichen Materialien etwas Einzigartiges zu schaffen – so entstand auch unser erster Tisch.</p>
-    <p data-aos="fade-up">Qualität, Nachhaltigkeit und Individualität stehen bei uns an erster Stelle.</p>
+
+  <main class="about-wrapper">
+    <div class="about-header">
+      <div class="about-text">
+        <h1>Über uns</h1>
+        <p>Schön, dass du hier bist! Wir sind Max und Tom – Freunde, Handwerker und Liebhaber von außergewöhnlichen Möbeln.</p>
+        <p>Jedes Stück, das unsere Werkstatt verlässt, fertigen wir von Hand – aus nachhaltigen Materialien, mit viel Liebe zum Detail. Wir glauben daran, dass ein Tisch mehr ist als ein Möbelstück: Er ist der Ort für deine schönsten Erinnerungen.</p>
+        <div class="about-values">
+          <div class="value-box">
+            <strong>Handarbeit</strong><br>
+            Jedes Stück individuell gefertigt.
+          </div>
+          <div class="value-box">
+            <strong>Nachhaltig</strong><br>
+            Wir achten auf regionale und umweltfreundliche Materialien.
+          </div>
+          <div class="value-box">
+            <strong>Persönlich</strong><br>
+            Direkter Kontakt – wir begleiten dich vom Wunsch bis zum fertigen Tisch.
+          </div>
+        </div>
+      </div>
+      <div class="team-photo-placeholder">
+        Teamfoto<br>folgt
+      </div>
+    </div>
+    <div class="about-quote">
+      „Wir bauen Möbel mit Herz und Hand – für Menschen, die das Besondere lieben.“
+    </div>
+    <div class="customer-feedback">
+      <div class="feedback-photo">K</div>
+      <div class="feedback-text">„Unser Tisch ist ein echtes Unikat und das neue Herzstück unseres Wohnzimmers. Danke euch beiden!“<br><small>– Kundin Kerstin</small></div>
+    </div>
+    <div class="about-contact">
+      <p>Du hast Fragen oder möchtest deinen eigenen Tisch gestalten?<br>Schreib uns, wir freuen uns auf deine Nachricht!</p>
+      <a href="kontakt.html">Jetzt Kontakt aufnehmen</a>
+    </div>
   </main>
+
   <div id="footer"></div>
   <script>
     fetch("footer.html")
@@ -39,8 +195,6 @@
         document.getElementById("footer").innerHTML = data;
       });
   </script>
-  <script src="script.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </body>
 </html>
+	  
