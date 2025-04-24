@@ -86,7 +86,8 @@
   </style>
 </head>
 <body>
-  <!-- HEADER EINBAU -->
+
+  <!-- HEADER -->
   <div id="navbar"></div>
   <script>
     fetch("header.html")
@@ -94,7 +95,7 @@
       .then(data => {
         document.getElementById("navbar").innerHTML = data;
 
-        // script.js nachladen (für Menü & Darkmode)
+        // script.js nachladen (für Darkmode & Menü)
         const script = document.createElement("script");
         script.src = "script.js";
         script.defer = true;
@@ -156,7 +157,17 @@
     <a href="shop.html" class="button">← Zurück zum Shop</a>
   </main>
 
-  <!-- SLIDER SCRIPT -->
+  <!-- FOOTER -->
+  <div id="footer"></div>
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+
+  <!-- SLIDER LOGIK -->
   <script>
     const slides = document.getElementById('slides');
     const totalSlides = slides.children.length;
